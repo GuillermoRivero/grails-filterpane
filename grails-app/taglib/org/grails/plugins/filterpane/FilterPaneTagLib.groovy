@@ -155,6 +155,7 @@ class FilterPaneTagLib {
      */
     def paginate = { attrs, body ->
         def filterParams = FilterPaneUtils.extractFilterParams(params)
+	filterParams.put("slug", params.slug)
         def count = 0I
 
         if (attrs.total != null) {
